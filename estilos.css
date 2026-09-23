@@ -1,150 +1,65 @@
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff5f7;
-    color: #333;
-}
-header {
-    background-color: #e89aaa;
-    text-align: center;
-    padding: 25px;
-}
-header h1 {
-    margin: 0;
-    color: white;
-    font-size: 35px;
-}
-header p {
-    color: white;
-    font-size: 18px;
-}
-
-nav {
-    background-color: #8e4a5c;
-    text-align: center;
-    padding: 15px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffdce3;
-}
-.bienvenida {
-    text-align: center;
-    padding: 35px;
-}
-
-.bienvenida h2 {
-    color: #8e4a5c;
-    font-size: 28px;
-}
-.titulo {
-    text-align: center;
-    color: #8e4a5c;
-    font-size: 28px;
-}
+body { margin: 0; font-family: Arial, sans-serif; background-color: #fff5f7; }
+header { background-color: #4f8f70; color: white; text-align: center; padding: 25px; }
+header h1 { margin: 0; font-size: 40px; }
+nav { background-color: #8e4a5c; text-align: center; padding: 12px; position: sticky; top: 0; z-index: 10; }
+nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+ 
+.bienvenida { text-align: center; padding: 40px 20px; background-color: #fffaf0; }
+.bienvenida h2 { color: #8e4a5c; }
+.titulo { text-align: center; color: #4f8f70; font-size: 30px; margin-top: 30px; }
+ 
+/* CATALOGO ARREGLADO */
 .catalogo {
-    width: 90%;
-    margin: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
     justify-content: center;
-
-    gap: 25px;
+    gap: 20px;
+    padding: 20px;
 }
+ 
+/* TARJETA CON ALTURA FIJA */
 .producto {
     background-color: white;
-
-    width: 280px;
-
-    padding: 15px;
-
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
-
-    border-radius: 10px;
-
-    box-shadow: 0 3px 10px #ccc;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
+ 
 .producto img {
     width: 100%;
-    height: 200px;
-
+    height: 180px;
     object-fit: cover;
-
-    border-radius: 8px;
-    transition: transform 0.3s;
+    border-radius: 10px;
 }
-.producto img:hover {
-    transform: scale(1.1);
-}
+ 
 .producto h3 {
     color: #8e4a5c;
-    font-size: 21px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+ 
 .producto p {
-    font-size: 15px;
+    font-size: 14px;
+    color: #555;
+    min-height: 35px;
+    margin: 5px 0;
 }
+ 
 .precio {
-    color: #d35470;
-
+    color: #d35470 !important;
     font-size: 20px !important;
-
     font-weight: bold;
+    min-height: auto !important;
 }
-
-button {
-    background-color: #e89aaa;
-
-    color: white;
-
-    border: none;
-
-    padding: 10px 20px;
-
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-button:hover {
-    background-color: #8e4a5c;
-}
-.nosotros {
-    background-color: #ffe1e7;
-
-    text-align: center;
-
-    padding: 35px;
-
-    margin-top: 40px;
-}
-
-.nosotros h2 {
-    color: #8e4a5c;
-}
-.contacto {
-    text-align: center;
-
-    padding: 30px;
-}
-
-.contacto h2 {
-    color: #8e4a5c;
-}
-footer {
-    background-color: #8e4a5c;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 15px;
-}
+ 
+.nosotros, .contacto { padding: 30px 20px; text-align: center; }
+.nosotros { background-color: #ffe1e7; }
+.contacto { background-color: #dcefe3; }
+footer { background-color: #4f8f70; color: white; text-align: center; padding: 15px; }
